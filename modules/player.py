@@ -24,7 +24,7 @@ class Player(pygame.sprite.Sprite):
         self.delta_y = 0
 
         # Atributos
-        self.speed = 4
+        self.speed = 3
         self.alive = True
 
     def draw(self, screen):
