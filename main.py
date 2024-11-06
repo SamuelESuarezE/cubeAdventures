@@ -2,7 +2,7 @@ import pygame
 import pygame.freetype
 from modules.player import Player
 from modules.tile import Tile
-from modules.levels_config import level1, enemies1
+from modules.levels_config import level1, enemies1, level2, enemies2, level3, enemies3
 from modules.constants import *
 
 # Inicializar juego
@@ -24,7 +24,7 @@ pygame.mixer.music.set_volume(0.2)
 
 def draw_rects():
     player.draw(SCREEN)
-    level1.draw(SCREEN)
+    level.draw(SCREEN)
 
     for enemy in enemies:
         enemy.draw(SCREEN)
@@ -62,8 +62,11 @@ def show_menu():
                         return i + 1 
 
 levels = {
-    1: {"level": level1, "enemies": enemies1}
+    1: {"level": level1, "enemies": enemies1},
+    2: {"level": level2, "enemies": enemies2},
+    3: {"level": level3, "enemies": enemies3}
 }
+
 
 selected_level = show_menu()
 
@@ -98,6 +101,7 @@ while True:
                 selected_level = show_menu()
                 level = levels[selected_level]['level']
                 enemies = levels[selected_level]['enemies']
+                player = Player(level.spawn_point[0], level.spawn_point[1])
                 player.reset()
             
 

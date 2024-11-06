@@ -1,7 +1,7 @@
 import pygame
 
 class Enemy(pygame.sprite.Sprite):
-    def __init__(self, x, y, patrol_distance=100, axis='x'):
+    def __init__(self, x, y, patrol_distance=100, axis='x', speed=2, direction=1):
         super().__init__()
 
         self.image = pygame.image.load("assets/enemy.png")
@@ -11,8 +11,8 @@ class Enemy(pygame.sprite.Sprite):
         # Movimiento
         self.starting_pos = (x, y) 
         self.patrol_distance = patrol_distance  
-        self.direction = 1 # 1 hacia delante, 2 hacia atras
-        self.speed = 2 
+        self.direction = direction
+        self.speed = speed
         self.axis = axis
 
     def move(self):
