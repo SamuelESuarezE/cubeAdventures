@@ -96,13 +96,13 @@ while True:
             if event.key == pygame.K_DOWN:
                 player.moving_down = True
             if event.key == pygame.K_r:
-                player.reset()
+                player = Player(level.spawn_point[0], level.spawn_point[1])
             if event.key == pygame.K_ESCAPE:
                 selected_level = show_menu()
                 level = levels[selected_level]['level']
                 enemies = levels[selected_level]['enemies']
                 player = Player(level.spawn_point[0], level.spawn_point[1])
-                player.reset()
+
             
 
         if event.type == pygame.KEYUP:
@@ -137,7 +137,8 @@ while True:
                 if selected_level:
                     level = levels[selected_level]['level']
                     enemies = levels[selected_level]['enemies']
-                    player.reset()
+                    player = Player(level.spawn_point[0], level.spawn_point[1])
+
                 break
             if player.rect.collidelist([enemy.rect for enemy in enemies]) != -1:
                 player.dead()

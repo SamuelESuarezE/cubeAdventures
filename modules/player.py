@@ -9,10 +9,6 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.image.load("assets/player.png").convert()
         self.rect = self.image.get_rect()
         self.rect.center = (x, y)
-
-        # Posicion default
-        self.default_x = x
-        self.default_y = y
         
         # Flags movimiento
         self.moving_left = False
@@ -51,14 +47,5 @@ class Player(pygame.sprite.Sprite):
         self.alive = False
         self.image = pygame.image.load("assets/player_dead.png").convert()
     
-    def reset(self):
-        self.alive = True
-        self.image = pygame.image.load("assets/player.png").convert()
-        self.moving_down = False
-        self.moving_left = False
-        self.moving_right = False
-        self.moving_up = False
-        self.rect.center = (self.default_x, self.default_y)
-
     
            
