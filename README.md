@@ -2,7 +2,7 @@
 
 ## Descripción
 
-**Cube Adventures** es un juego 2D en el que el jugador debe navegar por diferentes niveles, evitar tanto enemigos como obstaculos y alcanzar un objetivo mientras resuelve obstáculos. 
+**Cube Adventures** es un juego 2D en el que el jugador debe navegar por diferentes niveles, evitar tanto enemigos como obstaculos y alcanzar la meta!
 
 ![Imagen del juego](https://github.com/SamuelESuarezE/cubeAdventures/blob/main/assets/title.png)
 
